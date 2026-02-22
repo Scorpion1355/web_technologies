@@ -21,12 +21,17 @@
           <a class="site-nav__link" href="#reviews">Відгуки</a>
           <a class="site-nav__link" href="#contact">Зв’язатися</a>
         </nav>
+
+        <!-- Mobile burger -->
+        <button class="site-header__burger" aria-label="Menu" aria-expanded="false">
+          ☰
+        </button>
       </div>
     </header>
 
     <main id="top" class="page">
-      <!-- HERO -->
-      <section id="product" class="hero" aria-label="Головний блок">
+      <!-- SLIDE 1 -->
+      <section id="product" class="hero">
         <div class="hero__inner">
           <div class="hero__content">
             <h1 class="hero__title">Інтелектуальний вазон з автополивом</h1>
@@ -36,56 +41,27 @@
               створюючи ідеальні умови завдяки системі автополиву та датчикам.
             </p>
 
-            <a class="hero__button" href="#" role="button">
+            <a class="hero__button" href="#">
               Найкраща пропозиція<br />на Kickstarter
             </a>
           </div>
 
-          <figure class="hero__media">
-            <img
-              class="hero__image"
-              src="./assets/slide2-3_plant.png"
-              alt="Вазон LeafyPod з рослиною"
-              loading="eager"
-            />
-          </figure>
+          <div class="hero__media">
+            <img src="./assets/slide1_plant-right.png" alt="" />
+          </div>
         </div>
       </section>
 
-      <!-- FEATURES: 4 reasons -->
+      <!-- SLIDE 2 -->
       <section class="features" aria-label="Переваги">
-        <!-- декоративні листки -->
-        <img
-          class="features__leaf features__leaf--top-left"
-          src="./assets/slide4_topleft.png"
-          alt=""
-          aria-hidden="true"
-        />
-        <img
-          class="features__leaf features__leaf--top-right"
-          src="./assets/slide4_topright.png"
-          alt=""
-          aria-hidden="true"
-        />
-        <img
-          class="features__leaf features__leaf--bottom-left"
-          src="./assets/slide4_bottomleft.png"
-          alt=""
-          aria-hidden="true"
-        />
-        <img
-          class="features__leaf features__leaf--bottom-right"
-          src="./assets/slide4_bottomright.png"
-          alt=""
-          aria-hidden="true"
-        />
-
         <div class="features__inner">
           <h2 class="features__title">Вирішує 4 головні причини загибелі рослин</h2>
 
           <div class="features__grid">
             <article class="feature-card">
-              <div class="feature-card__icon" aria-hidden="true">🖼️</div>
+              <div class="feature-card__icon" aria-hidden="true">
+                <img src="./assets/slide2_wet-ground.svg" alt="" aria-hidden="true" />
+              </div>
               <h3 class="feature-card__title">Зволоження ґрунту</h3>
               <p class="feature-card__text">
                 Полив динамічно регулюється, щоб ваші рослини залишалися настільки
@@ -94,7 +70,9 @@
             </article>
 
             <article class="feature-card">
-              <div class="feature-card__icon" aria-hidden="true">🖼️</div>
+              <div class="feature-card__icon" aria-hidden="true">
+                <img src="./assets/slide2_light.svg" alt="" aria-hidden="true" />
+              </div>
               <h3 class="feature-card__title">Світло</h3>
               <p class="feature-card__text">
                 Отримуйте індивідуальні рекомендації щодо освітлення, навіть якщо ви
@@ -103,7 +81,9 @@
             </article>
 
             <article class="feature-card">
-              <div class="feature-card__icon" aria-hidden="true">🖼️</div>
+              <div class="feature-card__icon" aria-hidden="true">
+                <img src="./assets/slide2_temperature.svg" alt="" aria-hidden="true" />
+              </div>
               <h3 class="feature-card__title">Температура</h3>
               <p class="feature-card__text">
                 Вбудовані датчики відстежують температуру 24/7, тож ви будете
@@ -113,7 +93,9 @@
             </article>
 
             <article class="feature-card">
-              <div class="feature-card__icon" aria-hidden="true">🖼️</div>
+              <div class="feature-card__icon" aria-hidden="true">
+                <img src="./assets/slide2_air-humidity.svg" alt="" aria-hidden="true" />
+              </div>
               <h3 class="feature-card__title">Вологість повітря</h3>
               <p class="feature-card__text">
                 Чи знаєте ви, що 20% різниця вологості між вашою спальнею та ванною
@@ -125,8 +107,15 @@
         </div>
       </section>
 
-      <!-- HOW IT WORKS -->
+      <!-- SLIDE 3 -->
       <section class="steps" aria-label="Як це працює">
+        <img
+          class="steps__decor"
+          src="./assets/slide2-3_plant.png"
+          alt=""
+          aria-hidden="true"
+        />
+
         <div class="steps__inner">
           <div class="steps__content">
             <h2 class="steps__title">
@@ -168,21 +157,22 @@
         </div>
       </section>
 
-      <!-- PRODUCT FEATURES (6 cards) -->
+      <!-- SLIDE 4 -->
       <section class="cards" aria-label="Особливості продукту">
         <div class="cards__inner">
           <h2 class="cards__title">Особливості продукту</h2>
 
           <div class="cards__grid">
             <article class="small-card">
+              <img class="small-card__icon" src="./assets/slide4_topleft.png" alt="" aria-hidden="true" />
               <h3 class="small-card__title">Тривале використання</h3>
               <p class="small-card__text">
-                Фільтри гарантують тривалу роботу насоса. Захищений від пошкоджень
-                водою
+                Фільтри гарантують тривалу роботу насоса. Захищений від пошкоджень водою
               </p>
             </article>
 
             <article class="small-card">
+              <img class="small-card__icon" src="./assets/slide4_top.png" alt="" aria-hidden="true" />
               <h3 class="small-card__title">Лаконічний дизайн</h3>
               <p class="small-card__text">
                 Стильний та інноваційний аксесуар гармонійно впишеться до будь-якої оселі
@@ -190,6 +180,7 @@
             </article>
 
             <article class="small-card">
+              <img class="small-card__icon" src="./assets/slide4_topright.png" alt="" aria-hidden="true" />
               <h3 class="small-card__title">Регулярні оновлення</h3>
               <p class="small-card__text">
                 LeafyPod продовжує працювати завдяки оновленню програм
@@ -197,6 +188,7 @@
             </article>
 
             <article class="small-card">
+              <img class="small-card__icon" src="./assets/slide4_bottomleft.png" alt="" aria-hidden="true" />
               <h3 class="small-card__title">Бездротова конструкція</h3>
               <p class="small-card__text">
                 Більше 3 місяців на одному заряді навіть при регулярному використанні
@@ -204,6 +196,7 @@
             </article>
 
             <article class="small-card">
+              <img class="small-card__icon" src="./assets/slide4_bottom.png" alt="" aria-hidden="true" />
               <h3 class="small-card__title">Резервуар для води</h3>
               <p class="small-card__text">
                 Води в резервуарі достатньо приблизно на 4 тижні
@@ -211,6 +204,7 @@
             </article>
 
             <article class="small-card">
+              <img class="small-card__icon" src="./assets/slide4_bottomright.png" alt="" aria-hidden="true" />
               <h3 class="small-card__title">Екологічна упаковка</h3>
               <p class="small-card__text">
                 Упаковка виготовлена з матеріалів, які на 90+% підлягають переробці
@@ -220,7 +214,7 @@
         </div>
       </section>
 
-      <!-- APP FEATURES -->
+      <!-- SLIDE 5 -->
       <section id="app" class="side-list" aria-label="Функції мобільного додатку">
         <div class="side-list__inner">
           <div class="side-list__content">
@@ -275,9 +269,16 @@
         </div>
       </section>
 
-      <!-- WHAT'S IN THE BOX -->
+      <!-- SLIDE 6 -->
       <section class="gallery" aria-label="Що у комплекті">
         <div class="gallery__inner">
+          <img
+            class="gallery__plant-left"
+            src="./assets/slide6_plant-left.png"
+            alt=""
+            aria-hidden="true"
+          />
+
           <h2 class="gallery__title">Що у комплекті</h2>
 
           <div class="gallery__layout">
@@ -311,7 +312,7 @@
         </div>
       </section>
 
-      <!-- REVIEWS -->
+      <!-- SLIDE 7 -->
       <section id="reviews" class="testimonials" aria-label="Відгуки">
         <div class="testimonials__inner">
           <h2 class="testimonials__title">Відгуки</h2>
@@ -422,5 +423,24 @@
         </figure>
       </div>
     </footer>
+
+    <script>
+      const burger = document.querySelector('.site-header__burger');
+      const nav = document.querySelector('.site-nav');
+
+      if (burger && nav) {
+        burger.addEventListener('click', () => {
+          const open = nav.classList.toggle('is-open');
+          burger.setAttribute('aria-expanded', open);
+        });
+
+        nav.addEventListener('click', (e) => {
+          if (e.target === nav) {
+            nav.classList.remove('is-open');
+            burger.setAttribute('aria-expanded', false);
+          }
+        });
+      }
+    </script>
   </body>
 </html>
