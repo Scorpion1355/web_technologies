@@ -1,58 +1,57 @@
 export function max(arr) {
-    if (arr == 0) return NaN;
-    let max = Number.MIN_SAFE_INTEGER;
+    if (!Array.isArray(arr) || arr.length === 0) {
+        return NaN;
+    }
 
-    for (let i = 0; i < arr.length; i++) {
-        const current = arr[i];
+    let maxValue = arr[0];
 
-        if (current > max) {
-            max = current;
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > maxValue) {
+            maxValue = arr[i];
         }
     }
 
-    return max;
+    return maxValue;
 }
 
 export function maxPair(arr) {
-    if (arr == 0) return NaN;
+    if (!Array.isArray(arr) || arr.length === 0) {
+        return NaN;
+    }
 
-    let max = [];
+    let bestPair = [arr[0], arr[1] ?? 0];
+    let bestSum = bestPair[0] + bestPair[1];
 
-    for (let i = 0; i < arr.length; i++) {
-        const current = arr[i];
-        let next;
+    for (let i = 1; i < arr.length; i++) {
+        const currentPair = [arr[i], arr[i + 1] ?? 0];
+        const currentSum = currentPair[0] + currentPair[1];
 
-        if (arr[i + 1] === undefined || arr[i + 1] === null) {
-            next = 0;
-        } else {
-            next = arr[i + 1];
-        }
-
-        if (max == 0) {
-            max = [current, next];
-        } else {
-            if (current + next > max[0] + max[1]) {
-                max = [current, next];
-            }
+        if (currentSum > bestSum) {
+            bestPair = currentPair;
+            bestSum = currentSum;
         }
     }
 
-    return max;
+    return bestPair;
 }
 
-export function recordProgress(object, tuple) {
-    if (tuple == 0) return object;
+export function recordProgress(obj, tuple) {
+    if (obj === null || typeof obj !== "object" || Array.isArray(obj)) {
+        throw new Error("Invalid object");
+    }
 
-    const age = object.age;
-    const weight = object.weight;
+    const copy = { ...obj };
 
-    const ageChange = tuple[0];
-    const weightChange = tuple[1];
+    if (!Array.isArray(tuple) || tuple.length === 0) {
+        return copy;
+    }
 
-    const result = {
-        age: (age || 0) + ageChange,
-        weight: (weight || 0) + weightChange,
+    const ageChange = tuple[0] ?? 0;
+    const weightChange = tuple[1] ?? 0;
+
+    return {
+        ...copy,
+        age: (copy.age ?? 0) + ageChange,
+        weight: (copy.weight ?? 0) + weightChange,
     };
-
-    return Object.assign({}, object, result);
 }
